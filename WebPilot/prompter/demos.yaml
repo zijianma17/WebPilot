@@ -1,0 +1,688 @@
+gitlab: |
+    Example 1: 
+    **Main Task**: 'Create a new project named 'robo-nlp' and invite Jakub K and Alex Dills'.
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The first step is to navigate to the page of creating a new project.",
+            "subtask": "Navigate to the page of creating a new project",
+            "target_page_description": "The web page should be the project creation page, where I can input the project name, project slug, and other optional details.",
+            "necessary_actions": "Not Needed. Navigating to the project creation page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false,
+        }
+        {
+            "reasoning": "After navigating to the project creation page, I need to fill the project name with 'robo-nlp' and then create it.",
+            "subtask": "Fill the project name with 'robo-nlp'",
+            "target_page_description": "The web page should be the page of creating new project. The project name textbox should be filled with 'robo-nlp'.",
+            "necessary_actions": "Not Needed. Finish the project creation setting results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },  
+        {
+            "reasoning": "After the setting of the project, I need to confirm the project creation.",
+            "subtask": "Complete the creation of the project with all the necessary details already filled in.",
+            "target_page_description": "The web page should be page of the 'robo-nlp' repository. The main body of the page displays project-specific information such as project ID.",
+            "necessary_actions": "Not Needed. Navigating to the 'robo-nlp' project page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+        },
+        {
+            "reasoning": "After create the project, I might not in this project page, so I need to navigate to the 'robo-nlp' project page.",
+            "subtask": "Navigate to the 'robo-nlp' project page",
+            "target_page_description": "The web page should be page of the 'robo-nlp' project. The main body of the page displays project-specific information such as project ID.",
+            "necessary_actions": "Not Needed. Navigating to the 'robo-nlp' project page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After navigating to the 'robo-nlp' project page, I need to navigate to the members page using the sidebar.",
+            "subtask": "Access the page of the members through the sidebar",
+            "target_page_description": "The web page should be the members page of the 'robo-nlp' repo. The main body of the page includes the list of current members, and a clear button to invite new members.",
+            "necessary_actions": "Not Needed. Accessing the members page through the sidebar involves a clear change in the page’s content, making it easy to observe and determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "After accessing the members page, I need to bring up the invitation dialog to invite 2 new members.",
+            "subtask": "Bring up the member invitation dialog",
+            "target_page_description": "The web page should be the members page of the 'robo-nlp' repo. An member invitation dialog should be displayed.",
+            "necessary_actions": "Not Needed. Bringing up the member invitation dialog involves a clear change in the page’s content, making it easy to observe and determine if the subtask is complete.",
+            "need_answer": false
+        }
+        {
+            "reasoning": "After bringing up the invitation dialog, I need to add Jakub K's username to the invitation dialog.",
+            "subtask": "Add Jakub K's username to the invitation dialog",
+            "target_page_description": "The web page should be the members page of the 'robo-nlp' repo. The invitation dialog should be displayed, with Jakub K's username already filled in.",
+            "necessary_actions": "Needed. Necessary actions must include 1. typing 'Jakub K' in the username textbox of the invitation dialog, 2. choosing the right username from the list.",
+            "need_answer": false
+        }
+        {
+            "reasoning": "After adding Jakub K, I need to add Alex Dills' username to the invitation dialog.",
+            "subtask": "Add Alex Dills' username to the invitation dialog",
+            "target_page_description": "The web page should be the members page of the 'robo-nlp' repo. The invitation dialog should be displayed, with Jakub K's and Alex Dills' usernames already filled in.",
+            "necessary_actions": "Needed. Necessary actions must include 1. typing 'Alex Dills' in the username textbox of the invitation dialog, 2. choosing the right username from the list.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After adding Jakub K and Alex Dills, I need to confirm the invitation by clicking the 'invite' button.",
+            "subtask": "Complete the invitation process by interacting with the relevant element",
+            "target_page_description": "The web page should be the members page of the 'robo-nlp' repo. The main body of the page includes the list of current members, where Jakub K and Alex Dills should be listed. The invitation dialog should be closed.",
+            "necessary_actions": "Not Needed. The page should remain in the members page but the invitation dialog should be closed. Showing a clear change in the environment.",
+            "need_answer": false
+        },
+    ]
+
+    Example 2:
+    **Main Task**: 'List the latest updated issue with keyword "accessible" in the 'soccer-ai' repo. Assign the issue to Roshanjossey. Set due date to be the end of 2030.'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The current state includes a list of projects. Since the main task mentions 'soccer-ai' repo. I need to first go to the homepage of the 'soccer-ai' repo. Navigating to the homepage of a project repository typically does not require specifying the use of the topbar or sidebar because this action can be performed directly from the project list or search results page.",
+            "subtask": "Navigate to the homepage of the 'soccer-ai' repo",
+            "target_page_description": "The web page should be the page of the 'soccer-ai' repository. The main body of the page displays project-specific information such as project ID.",
+            "necessary_actions": "Not Needed. Navigating to the homepage results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "Since the task involves managing issues of the 'soccer-ai' repo, the next step is to navigate to the issues page of the 'soccer-ai' repo using the sidebar.",
+            "subtask": "Access the page of the issues page through the sidebar",
+            "target_page_description": "The web page should be the issues page of the 'soccer-ai' repository. The main body of the page includes the list of issues, with their titles, assignees, due dates, etc.",
+            "necessary_actions": "Not Needed. Accessing the issues page through the sidebar involves a clear change in the page’s content, making it easy to observe and determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "To ensure I include all relevant issues, I need to set the filter to 'all' status to include both open and closed issues.",
+            "subtask": "Filter the issues to show the 'all' ones.",
+            "target_page_description": "The web page should be the issues page of the 'soccer-ai' repository, with the 'all' status selected. The main body of the page should display the list of all issues, including their titles, assignees, due dates, etc.",
+            "necessary_actions": "Needed. Necessary actions should include 1. selecting the 'all' status tab or relevant elements. Changing the filter status might not result in a highly noticeable change, making it essential to ensure the action is explicitly performed to confirm the subtask completion.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "To find the latest updated issue, I need to choose the sorting option to sort the issues by the latest updated time in descending order.",
+            "subtask": "Choose the sorting option to sort the issues by the latest updated time in descending order",
+            "target_page_description": "The web page should be the issues page of the 'soccer-ai' repository, with the issues sorted by the latest updated time in descending order.",
+            "necessary_actions": "Needed. Necessary actions must include 1. expanding the dropdown menu to reveal sorting options (explicitly shown as a distinct action). If the sorting option is not set to latest updated time, then 2. selecting the sorting option to arrange the issues by the latest updated time (explicitly shown as a distinct action). Sorting options involve subtle changes to the issue list that may not be obvious without explicitly detailing the necessary actions.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After sorting the issues, I need to find the issue with the keyword 'accessible' in its title.",
+            "subtask": "Search for the issue with the keyword 'accessible' in its title",
+            "target_page_description": "The web page should remain the issues page of the 'soccer-ai' repository, with the issues list filtered by the keyword 'accessible' in their titles.",
+            "necessary_actions": "Not Needed. Searching for a keyword in the title typically results in a noticeable change in the list of issues, making it easy to determine if the subtask is complete through observation.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After sorting and searching the issues, I need to access the page of the first issue. By simply entering the page, I can view the detailed information of the issue.",
+            "subtask": "Access the page of the first issue",
+            "target_page_description": "The web page should be the detailed page of the first issue. The main body of the page includes the issue's title, description, assignee, due date, etc.",
+            "necessary_actions": "Not Needed. Accessing the detailed page of an issue results in a significant change in the environment that is easily observable.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "In the detailed page of the issue, I need to fill the assignee textbox with Roshanjossey. Then set the due date to the end of 2030.",
+            "subtask": "Fill the assignee textbox with Roshanjossey and set the due date to the end of 2030.",
+            "target_page_description": "The web page should be the detailed page of the issue, with the assignee textbox already filled with 'Roshanjossey' and the due date already set to the 31. Dec. 2030.",
+            "necessary_actions": "Not Needed. Filling the assignee textbox and setting the due date involves a clear change in the issue details, making it easy to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After filling the assignee and due date, I need to confirm the changes by clicking the 'submit' button.",
+            "subtask": "Complete the submission of the issue by interacting with the relevant element",
+            "target_page_description": "The web page should be the detailed page of the issue, with the assignee set to 'Roshanjossey' and the due date set to the 31. Dec. 2030.",
+            "necessary_actions": "Not Needed. After submitting the changes, the page should be the detailed page of the issue, where the assignee and due date are updated, involving a clear and noticeable change in the environment.",
+            "need_answer": false
+        }
+    ]
+
+    Example 3:
+    **Main Task**: 'List the names of the top 3 contributors who have the most commits to the branch ''test' of the “PC-reg” repository.'
+    **Decomposed Plan**:
+    [
+        {
+            “reasoning”: "The current state includes a list of projects. Since the main task mentions ‘PC-reg’ repository, the first step is to enter the homepage of the repository ‘PC-reg’. I need to search for it on the all repositories page and enter its homepage. Navigating to the homepage of a project repository can be done directly from the project list or search results page without specifying the use of the topbar or sidebar.”
+            "subtask": "Navigate to the page of the 'PC-reg' repository",
+            "target_page_description": "The web page should be the page of the 'PC-reg' repository. The main body of the page displays project-specific information such as project ID.",
+            "necessary_actions": "Not Needed. Navigating to the project's page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "Since the task has the word 'branch', to identify the contributor with the most commits to the branch main, I MUST set the branch explicitly.",
+            "subtask": "Set the branch to 'test'",
+            "target_page_description": "The web page should still be the homepage of the 'PC-reg' repository. The main body of the page includes the repo's name('PC-reg'), description, etc. The branch should be set to 'test', where the branch name should be strictly 'test'.",
+            "necessary_actions": "Needed. Necessary acitons must include 1. selecting the test branch from the dropdown branch menu or from the branch list. This step is necessary because changing the branch to test ensures that the specific commits and files associated with that branch are displayed. The action must be explicitly confirmed to verify the correct branch is active, as it may not be immediately apparent from the interface.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "To find information about the contributor, I need to go to the contributors page through the sidebar to view the contributor statistics. When navigating to specific subpages, such as issues or merge requests, it is important to specify the navigation method (top bar or sidebar) to ensure clarity and accuracy.",
+            "subtask": "Navigate to the contributor page of the 'PC-reg' repository through the sidebar",
+            "target_page_description": "The web page should be the contributors page of the 'PC-reg' repository. The main body of the page includes the list of contributors and the number of commits.",
+            "necessary_actions": "Not Needed. Accessing the contributors page through the sidebar results in a clear change in the page’s content, making it easy to observe and determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After setting the branch, the contributor names should be listed in descending order of the number of commits by default. Now I need to record the names of the top 3 contributors.",
+            "subtask": "Record the name of the top 3 contributors",
+            "target_page_description": "The web page should remain the contributors page of the 'PC-reg' repository. The main body of the page includes the list of contributors and the number of commits.",
+            "necessary_actions": "Not Needed. Recording the names of the top 3 contributors is an observational task, and the data is presented directly and clearly on the page, making it easy to determine if the subtask is complete.",
+            "need_answer": true
+        },
+    ]
+
+    Example 4:
+    **Main Task**: 'Check out the most recent 'closed' merge requests requiring my review.' (Note: "Check out" doesn't really need an answer since it will be displayed on the page.)
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "Since the current state is not a specific project, I think the task involves checking the merge requests associated with my account. To do this, I need to use the elements in the top bar, which lead to pages related to my account.",
+            "subtask": "Navigate to the merge requests requiring my review through the top bar",
+            "target_page_description": "The web page should be the merge requests requiring my review page, where items are listed with relevant information.",
+            "necessary_actions": "Not Needed. Navigating to the merge requests page results in a clear and noticeable change in the environment, making it easy to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "To find the most recent merge requests, I need to choose the sorting option to sort the merge requests by the created date in descending order.",
+            "subtask": "Choose the sorting option to sort the merge requests by the created date in descending order",
+            "target_page_description": "The web page should be the merge requests page, with the requests sorted by the created date in descending order.",
+            "necessary_actions": "Needed. Necessary actions must include 1. expanding the dropdown menu to reveal sorting options (explicitly shown as a distinct action). If the sorting option is not set to created date, then 2. selecting the sorting option to arrange the requests by the created date (explicitly shown as a distinct action). Sorting the list by created date involves subtle changes that may not be immediately observable, requiring explicit actions to ensure the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "If the task does not specify the status of the merge requests, I need to select the 'all' status tab to ensure a comprehensive search. But here, the task specifies 'closed' ones, so I need to click on the 'closed' status tab to filter the merge requests appropriately.",
+            "subtask": "Filter the merge requests to show the 'closed' ones.",
+            "target_page_description": "The web page should be the merge requests page, with the 'closed' status tab selected. The main body of the page includes the list of closed merge requests, with their titles, assignees, etc.",
+            "necessary_actions": "Needed. Necessary actions must include 1. selecting the 'closed' status tab or relevant elements. Clicking on the 'closed' tab results in a subtle change in the list of merge requests that may not be immediately noticeable, requiring explicit actions to ensure the subtask is complete.",
+            "need_answer": false
+        },
+    ]
+
+shopping_admin: |
+    Example 1:
+    **Main Task**: 'Edit the product "Nike Flyknit running shoes", set its weight to 0.3 kg and reduce the price by $10.'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The task needs to edit the specific product. The first step is to navigate to the product management page.",
+            "subtask": "Navigate to the 'Products' page",
+            "target_page_description": "The web page should be the products management page, where a list of products is displayed with their details.",
+            "necessary_actions": "Not Needed. Navigating to the products management page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After accessing the products management page, I need to search for the product 'Nike Flyknit running shoes' and enter its detailed page.",
+            "subtask": "Search for the product 'Nike Flyknit running shoes' and access its detailed page",
+            "target_page_description": "The web page should be the detailed page of the product 'Nike Flyknit running shoes', where its information is displayed, e.g., name, SKU, price, weight, etc.",
+            "necessary_actions": "Not Needed. Accessing the detailed page of the product results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After accessing the detailed page of the product, I need to set its weight to 0.3 kg.",
+            "subtask": "Set the weight of the product to 0.3 kg",
+            "target_page_description": "The web page should be the detailed page of the product 'Nike Flyknit running shoes'. The weight field should be set to 0.3 kg.",
+            "necessary_actions": "Needed. Necessary actions must include typing '0.3' in the weight field.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After setting the weight, I need to reduce the price of the product by $10. From the current observation I can see the price is $109 originally, so I will set it to $99.",
+            "subtask": "Set the price of the product to $99",
+            "target_page_description": "The web page should be the detailed page of the product 'Nike Flyknit running shoes'. The price field should be updated to $99.",
+            "necessary_actions": "Needed. Necessary actions must include typing '99' in the price field.",
+            "need_answer": false
+        }
+    ]
+
+    Example 2:
+    **Main Task**: 'Find the order 221 and send the confirmation email to the customer'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The task involves finding a specific order. The first step is to navigate to the orders page.",
+            "subtask": "Navigate to the 'Orders' page",
+            "target_page_description": "The web page should be the orders management page, where a list of orders is displayed with their details.",
+            "necessary_actions": "Not Needed. Navigating to the orders management page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After accessing the orders page, the next step is tosearch the order with ID 221. I need to complete it with leading zeros as 000000221.",
+            "subtask": "Search for order ID 000000221. ",
+            "target_page_description": "The current page should display the orders with ID 000000221, including its details such as the purchase date, status, actions, etc.",
+            "necessary_actions": "Not Needed. The search result page should be clear and noticeable, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "I have found order 000000221. Since the task involves editing the order status, the next step is to navigate to the detailed view page of this order using the relevant button.",
+            "subtask": "Navigate to the detail view page of the order 000000302",
+            "target_page_description": "The current page should be the detailed view of order 000000302, which matches the order ID specified in the objective. The page contains comprehensive information about the order and account, such as the order ID, purchase date, billing address, shipping address, etc.",
+            "necessary_actions": "Not Needed. Accessing the detailed view page of order 000000221 results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After navigating to the detailed view page of order 000000221, the next step is to send the confirmation email to the customer.",
+            "subtask": "Send the confirmation email to the customer",
+            "target_page_description": "The current page should be the detailed view of order 000000221, which matches the order ID specified in the objective. The page should contain comprehensive information about the order and account.",
+            "necessary_actions": "Needed. The necessary actions should include 1. clicking on the send email or relevant button, 2. interacting with the relevant element of the operation confirmation.",
+        }
+    ]
+
+    Example 3:
+    **Main Task**: 'Generate a tax report for 2022 Q3.'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The objective is to generate report, I should first bring up the 'Report' section so that I could navigate to 'Tax Report' generation page."
+            "subtask": "Bring up the 'REPORTS' section",
+            "target_page_description": "There should be a generic part of the 'REPORTS' section, displaying links like 'Marketing', 'Sales', 'Products', etc.",
+            "necessary_actions": "Needed. The necessary actions must include clicking 'REPORTS' in the menubar",
+            "need_answer": false
+        },
+        {
+            "reasoning": "This task is related to 'Tax', I have to select 'Tax' option in the reports panel. ",
+            "subtask": "Navigate to 'Tax Report' page",
+            "target_page_description": "The title of the current page should be 'Tax Report', the main body of this page should be 'Filter' options, where I can set the filter for report generation, and a table initially empty to display the generated report.",
+            "necessary_actions": "Not Needed. Accessing the 'Tax Report' page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "To generate a tax report for 2022 Q3, I need to, I need to set the date range in the "From" and "To" fields to 2022 Q3 dates. As the prior knowledge has mentioned, I have to set the date range from 7/1/2022 to 30/9/2022, in 'From' and 'To' fields respectively. ",
+            "subtask": "Set date range from 7/1/2022 to 30/9/2022 and generate the report. ",
+            "target_page_description": "The current page should remain the 'Tax Report' page. The "From" textbox has to be set with '7/1/2022' and the "To" textbox has to be set with '30/9/2022'. The tax reports should be generated and displayed. ",
+            "necessary_actions": "Needed. The necessary actions must include 1. typing "7/1/2022' in the "From" textbox, and 2. typing '9/30/2022' in the "To" textbox and 3. clicking the report generation button or relevant element to display the order report. ",
+            "need_answer": false
+        },
+    ]
+
+    Example 4:
+    **Main Task**: 'Edit the page "Order Received" to "Thanks for choosing us". '
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "To change the title of the 'Order Received' page, I first need to navigate to the 'Pages' section of the Magento Admin Dashboard. This is necessary to access the list of pages where I can find the specific page I want to edit.",
+            "subtask": "Navigate to the 'Pages' section",
+            "target_page_description": "The current page should display a list of all the pages on the site, including their titles and other relevant information.",
+            "necessary_actions": "Not Needed. Navigating to the 'Pages' website is a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the 'Pages', I need enter the edit page of the target page 'Order Received' to modify its title. ",
+            "subtask": "Navigate to the edit page of the 'Order Received' page",
+            "target_page_description": "The current page should be the edit page of the 'Order Received' page, including the title textbox able to be edited, and other relevant information.",
+            "necessary_actions": "Not Needed. Accessing the edit page of the 'Order Received' page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the edit page of 'Order Received', I need to modify the title to 'Thanks for choosing us'. ",
+            "subtask": "Change the title 'Order Received' to 'Thanks for choosing us'. ",
+            "target_page_description": "The current page should remain the 'Pages' section. The title of the page 'Order Received' should be changed to 'Thanks for choosing us'. ",
+            "necessary_actions": "Needed. The necessary actions must include 1. type the new title 'Thanks for choosing us' into the corresponding textbox, and 2. save the changes by clicking relevant element. ",
+            "need_answer": false
+        }    
+    ]   
+
+shopping: |
+    Example 1:
+    **Main Task**: 'Add Banana Boat Ultra Sport Sunscreen Lotion to my wishlist'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The objective is add 'Banana Boat Ultra Sport Sunscreen Lotion' to the wishlist. Since I am on the homepage of the shopping website, I need to search for the product in the first step.",
+            "subtask": "Search for the product 'Banana Boat Ultra Sport Sunscreen Lotion'",
+            "target_page_description": "The current page should be the search results for 'Banana Boat Ultra Sport Sunscreen Lotion', and the main body should list products with their names and descriptions, including 'Banana Boat Ultra Sport Sunscreen Lotion' or other relevant products.",
+            "necessary_actions": "Not Needed. Accessing the searching results page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After achieving the search results page, I need to add the product 'Banana Boat Ultra Sport Sunscreen Lotion' to my wishlist by interacting with the relevant button.",
+            "subtask": "Add the 'Banana Boat Ultra Sport Sunscreen Lotion' to the wishlist",
+            "target_page_description": "The current page should be 'My Wish List'. The main body should display the products of my wish list, where the product 'Banana Boat Ultra Sport Sunscreen Lotion' should be listed as the first one.",
+            "necessary_actions": "Not Needed. Adding the product to the wishlist will lead to the page of 'My Wish List', which results in a clear and noticeable change in the environment.",
+            "need_answer": false
+        },
+    ]
+
+    Example 2:
+    **Main Task**: 'Extract the positive reviews of the product Iphone 13 Pro Max'
+    **Decomposed Plan**
+    [
+        {
+            "reasoning": "The object is to extract the positive reviews of the product 'Iphone 13 Pro Max'. Since I am on the homepage of the shopping website, I need to search for the product in the first step.",
+            "subtask": "Search for the product 'Iphone 13 Pro Max'",
+            "target_page_description": "The current page should be the search results for 'Iphone 13 Pro Max', and the main body should list products with their names and descriptions, including 'Iphone 13 Pro Max' or other relevant products.",
+            "necessary_actions": "Not Needed. Accessing the searching results page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "To find exactly 'Iphone 13 Pro Max' product and get its reviews, I need to select the most relevant product on the current page and go to its detail page.",
+            "subtask": "Navigate to the product page of the 'Iphone 13 Pro Max'",
+            "target_page_description": "The current page should be the details page of 'Iphone 13 Pro Max', displaying its name, the SKU, price and reviews link.",
+            "necessary_actions": "Not Needed. Accessing the target product details page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },        
+        {
+            "reasoning": "To extract the positive reviews of the product 'Iphone 13 Pro Max', I need to navigate to the reviews page in the next step.",
+            "subtask": "Navigate to the reviews page",
+            "target_page_description": "The page should display customer reviews. For each review, the title, rating, review content, the reviewer's username, and the date of the review should be visible.",
+            "necessary_actions": "Not Needed. Accessing the reviews page results in a clear and noticeable change in the environment.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After accessing the reviews page of the product 'Iphone 13 Pro Max', the next step is to scan each review's title and content by scrolling page and extract the positive reviews.",
+            "subtask": "Extract the positive reviews of the product 'Iphone 13 Pro Max'",
+            "target_page_description": "The page should display customer reviews. For each review, the title, rating, review content, the reviewer's username, and the date of the review should be visible.",
+            "necessary_actions": "Not Needed. The page should remain the same.",
+            "need_answer": true
+        },
+    ] 
+
+    Example 3:
+    **Main Task**: 'Tell me the payment method of the order 000000123'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The objective is to find the payment method of the order 000000123. I should first navigate to the 'Orders' page.",
+            "subtask": "Navigate to 'My Orders' page",
+            "target_page_description": "The current page should be 'Orders', the side bar should include my account, my orders, my downloadable products, my wish list, etc. The main body should display the orders information, like Order #, Date, Order Total, etc.",
+            "necessary_actions": "Not Needed. Accessing 'Orders' page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false         
+        },
+        {
+            "reasoning": "After entering 'My Orders' page, I need to enter the detailed page of the order 000000123 to find the payment method.",
+            "subtask": "Navigate to the detailed page of the order 000000123",
+            "target_page_description": "The current page should be the detailed page of the order 000000123, displaying the order details, including the payment method.",
+            "necessary_actions": "Not Needed. accessing the detailed page of the order 000000123 results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After accessing the detailed page of the order 000000123, the next step is to find the payment method.",
+            "subtask": "Find the payment method of the order 000000123",
+            "target_page_description": "The current page should be the detailed page of the order 000000123, displaying the order details, including the payment method.",
+            "necessary_actions": "Not Needed. The page should remain the same.",
+            "need_answer": true
+        }
+    ]
+
+    Example 4:
+    **Main Task**: 'Use the "Contact Us" form to ask about the availability of the product "Samsung Galaxy S21"'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The objective is to inquire about the availability of the product 'Samsung Galaxy S21' using the 'Contact Us' form. I should first navigate to the 'Contact Us' page.",
+            "subtask": "Navigate to the 'Contact Us' page",
+            "target_page_description": "The current page should be the 'Contact Us' page, displaying the contact form with fields for name, email, subject textboxes.",
+            "necessary_actions": "Not Needed. Accessing the 'Contact Us' page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+        },
+        {
+            "reasoning": "After accessing the 'Contact Us' page, since the name and my email are default filled, the next step is to fill out the form with the inquiry about the availability of the product 'Samsung Galaxy S21'.",
+            "subtask": "Fill out the 'Contact Us' form with 'Samsung Galaxy S21' availability inquiry",
+            "target_page_description": "The current page should be the 'Contact Us' page, displaying the filled form with the inquiry about the availability of the product 'Samsung Galaxy S21'.",
+            "necessary_actions": "Needed. The necessay action should include filling out the form fields with the inquiry about the availability of the product 'Samsung Galaxy S21'.",
+            "need_answer": false
+        },
+    ]
+    
+reddit: |
+    Example 1:
+    **Main Task**: 'Post a problem of the "whatsapp app not able to upgrade" in the subreddit "meta", describe the problem in detail "After upgraded the ios system".'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The first step is to navigate to the page where all forums are listed.",
+            "subtask": "Navigate the forums list page",
+            "target_page_description": "The web page should listing all forums.",
+            "necessary_actions": "Not Needed. Navigating to the forums list page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "Since the task involves posting in the subreddit 'meta', the next step is to navigate to the subreddit 'meta'.",
+            "subtask": "Enter the page of subreddit 'meta'",
+            "target_page_description": "The web page should be the subreddit 'meta' page, where the relevant posts are listed.",
+            "necessary_actions": "Not Needed. Entering the subreddit 'meta' page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the subreddit 'meta', I need to go to the post creation page.",
+            "subtask": "Navigate to the post creation page",
+            "target_page_description": "The web page should be the post creation page, where the title and body textboxes are now available for input.",
+            "necessary_actions": "Not Needed. Navigating to the post creation page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        }
+        {
+            "reasoning": "After entering the subreddit 'meta', I need to create a post with the title 'whatsapp app not able to upgrade' and the body 'After upgraded the ios system'.",
+            "subtask": "Fill the title 'whatsapp app not able to upgrade' and the body 'After upgraded the ios system'",
+            "target_page_description": "The web page should remain the post creation page, with the title and body textboxes filled with the specified content.",
+            "necessary_actions": "Needed. Filling the title and body involves specific actions that may not be noticeable in the environment, requiring explicit actions to ensure the subtask is complete. Necessary actions should include 1. typing the title 'whatsapp app not able to upgrade', 2. typing the body 'After upgraded the ios system'.",
+            "need_answer": false
+        }
+        {
+            "reasoning": "After filling the title and body, I need to complete the submission process by clicking the 'create post' or relevant button.",
+            "subtask": "Complete the submit of the post with all the necessary details already filled in",
+            "target_page_description": "The web page should be the page of newly created post with the title 'whatsapp app not able to upgrade'. The main body should include the post content, comments section, etc.",
+            "necessary_actions": "Needed. Necessary actions should include clicking the 'create submission' button or relevant button to complete the post submission.",
+            "need_answer": false
+        }
+    ]
+
+    Example 2:
+    **Main Task**: 'I don't know what movie to watch tonight. Ask for some recommendations in relevant subreddit.'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The first step is to navigate to the page where all forums are listed.",
+            "subtask": "Navigate the forums list page",
+            "target_page_description": "The web page should listing all forums.",
+            "necessary_actions": "Not Needed. Navigating to the forums list page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "Since the task does not specify a particular subreddit, I need to enter the page of a relevant subreddit to ask for movie recommendations.",
+            "subtask": "Enter the page of subreddit related to movies, films, etc.",
+            "target_page_description": "The web page should be the subreddit's (e.g., 'movies', 'film', etc.) home page, where the relevant posts are listed.",
+            "necessary_actions": "Not Needed. Entering the relevant subreddit page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the relevant subreddit, I need to go to the post creation page.",
+            "subtask": "Navigate to the post creation page",
+            "target_page_description": "The web page should be the post creation page, where the title and body textboxes are now available for input.",
+            "necessary_actions": "Not Needed. Navigating to the post creation page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the relevant subreddit, I need to create a post with the title 'Movies recommendations'.",
+            "subtask": "Fill the title 'Movies recommendations'",
+            "target_page_description": "The web page should remain the post creation page, with the title textbox filled with 'Movies recommendations'.",
+            "necessary_actions": "Needed. Filling the title involves specific actions that may not be noticeable in the environment, requiring explicit actions to ensure the subtask is complete. Necessary actions should include typing the title 'Movies recommendations'.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After the title is filled, I need to confirm the submission by clicking the 'create post' or relevant button.",
+            "subtask": "Complete the submit of the post with the title 'Movies recommendations'",
+            "target_page_description": "The web page should be the page of newly created post with the title 'Movies recommendations'. The main body should include the post content, comments section, etc.",
+            "necessary_actions": "Needed. Necessary actions should include clicking the 'create submission' button or relevant button to complete the post submission.",
+            "need_answer": false
+        }
+    ]
+
+    Example 3:
+    **Main Task**: 'Change my profile to "CEO of a robot startup", then create a new forum named "RoboNLP" with the description "Combining Robot and NLP", and include ["Paper", "Algorithm", "Project"] in the sidebar.'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The first step is to navigate to the profile editing page.",
+            "subtask": "Navigate to the user profile editing page",
+            "target_page_description": "The web page should be the user's profile editing page, where the user's biography textbox is ready for editing.",
+            "necessary_actions": "Not Needed. Navigating to the profile editing page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the profile editing page, I need to change the biography to 'CEO of a robot startup'.",
+            "subtask": "Change the biography to 'CEO of a robot startup'",
+            "target_page_description": "The web page should be the profile editing page, where the user's biography textbox displays 'CEO of a robot startup'.",
+            "necessary_actions": "Needed. Changing the biography involves specific actions that may not be noticeable in the environment, requiring explicit actions to ensure the subtask is complete. Necessary actions should include typing 'CEO of a robot startup' in the biography textbox and click the 'save' button.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After that, I need to navigate to the page of creating a new forum.",
+            "subtask": "Navigate to the page of creating a new forum",
+            "target_page_description": "The web page should be the forum creation page, where the forum name, title, description, and sidebar textbox items are ready for input.",
+            "necessary_actions": "Not Needed. Navigating to the forum creation page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the forum creation page, I need to create a new forum named 'RoboNLP'. First is to fill the forum name and title with 'RoboNLP'.",
+            "subtask": "Fill the forum name and title with 'RoboNLP'",
+            "target_page_description": "The web page should remain the forum creation page, with the forum name textbox filled with 'RoboNLP', the forum title textbox filled with 'RoboNLP'.",
+            "necessary_actions": "Needed. Necessary actions should include 1. typing 'RoboNLP' in the forum name textbox, 2. typing 'RoboNLP' in the forum title textbox.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After typing the forum name and title, I need to fill the description with 'Combining Robot and NLP', and the sidebar items with ['Paper', 'Algorithm', 'Project'].",
+            "subtask": "Fill the description with 'Combining Robot and NLP', and the sidebar items with ['Paper', 'Algorithm', 'Project']",
+            "target_page_description": "The web page should remain the forum creation page, with the forum name textbox filled with 'RoboNLP', the description textbox filled with 'Combining Robot and NLP', and the sidebar items ['Paper', 'Algorithm', 'Project'] included.",
+            "necessary_actions": "Needed. Necessary actions should include 1. typing 'Combining Robot and NLP' in the description textbox, and 2. typing ['Paper', 'Algorithm', 'Project'] in the sidebar textbox.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After filling the forum name, title, description, and sidebar items, I need to complete the forum creation by clicking the 'create forum' or relevant button.",
+            "subtask": "Complete the creation of the forum with all the necessary details already filled in",
+            "target_page_description": "The web page should be the home page of the forum 'RoboNLP', currently displaying no posts, since it is a newly created forum.",
+            "necessary_actions": "Not Needed. Completing the forum creation results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        }    
+    ]
+    
+    Example 4:
+    **Main Task**: 'Upvote the top3 newest post in the subreddit "cats", and Like all the submissions of the user "cristine" in the subreddit "cats".'
+    **Decomposed Plan**:
+    {
+        {
+            "reasoning": "The first step is to navigate to the page where all forums are listed.",
+            "subtask": "Navigate the forums list page",
+            "target_page_description": "The web page should listing all forums according to alphabetical order.",
+            "necessary_actions": "Not Needed. Navigating to the forums list page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "Since the task involves upvoting the top 3 newest posts in the subreddit 'cats', the next step is to navigate to the subreddit 'cats'.",
+            "subtask": "Enter the page of subreddit 'cats'",
+            "target_page_description": "The web page should be the subreddit 'cats' page, where the relevant posts are listed.",
+            "necessary_actions": "Not Needed. Entering the subreddit 'cats' page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the subreddit 'cats', I need to sort the posts by newest.",
+            "subtask": "Sort the posts by newest",
+            "target_page_description": "The web page should be the subreddit 'cats' page, where the posts are sorted by newest.",
+            "necessary_actions": "Needed. Sorting the posts by newest involves specific actions that may not be noticeable in the environment, requiring explicit actions to ensure the subtask is complete. Necessary actions should include bringing up the dropdown menu, selecting the "new" sorting option.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After sorting the posts, I need to upvote the top 3 newest posts.",
+            "subtask": "Upvote the top 3 newest posts",
+            "target_page_description": "The web page should be the subreddit 'cats' page, where the top 3 newest posts are upvoted.",
+            "necessary_actions": "Needed. Upvoting the top 3 newest posts involves specific actions that may not be noticeable in the environment, requiring explicit actions to ensure the subtask is complete. Necessary actions should include 3 times clicking the upvote button, for the top 3 newest posts.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "I need to go to the user 'cristine's submission page to view all the submissions.",
+            "subtask": "Navigate the user 'cristine's submission page",
+            "target_page_description": "The web page should be the user 'cristine's submission page, where all the submissions created by 'cristine' are listed.",
+            "necessary_actions": "Not Needed. Entering the user 'cristine's submission page results in a clear and noticeable change in the environment, which can be easily observed to determine if the subtask is complete.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the user 'cristine's submission page, I need to like all the submissions in the subreddit 'cats'.",
+            "subtask": "Like all the submissions of the user 'cristine' in the subreddit 'cats'",
+            "target_page_description": "The web page should be the user 'cristine's submission page, where all the submissions created by 'cristine' are listed",
+            "necessary_actions": "Needed. Liking all the submissions involves specific actions that may not be noticeable in the environment, requiring explicit actions to ensure the subtask is complete. Necessary actions should include clicking the like button for each submission which is created by 'cristine' and posted in the subreddit 'cats'.",
+            "need_answer": false
+        }
+    }
+
+map: |
+    Example 1:
+    **Main Task**: 'I am currently in NYU, how long does it take to drive to the Apple Store in Pittsburgh?'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "The first step is to navigate to the route planning page.",
+            "subtask": "Navigate to the route planning page",
+            "target_page_description": "The web page should be the route planning page, where the 'from' and 'to' textboxes are displayed, currently empty and available for input.",
+            "necessary_actions": "Needed. The executed actions must include 1. clicking the 'find directions' or 'route planning' button to navigate to the route planning page.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After entering the route planning page, I need to search the route from 'NYU' to 'Apple Store Pittsburgh'.",
+            "subtask": "Search the route from 'NYU' to 'Apple Store Pittsburgh'",
+            "target_page_description": "The current web page should display the time estimation for driving from 'NYU' to 'Apple Store Pittsburgh'. The page should include the route information, distance, and time estimation.",
+            "necessary_actions": "Needed. Executed actions must include 1. typing 'NYU' in the 'from' textbox, 2. typing 'Apple Store Pittsburgh' in the 'to' textbox.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After searching, the route information including the time estimation and the distance should be displayed.",
+            "subtask": "Extract the estimated time from NYU to Apple Store Pittsburgh",
+            "target_page_description": "The current web page should display the time estimation for driving from 'NYU' to 'Apple Store Pittsburgh'. The page should include the route information, distance, and time estimation.",
+            "necessary_actions": "Not Needed. Extracting the estimated time involves observing the displayed information, which is directly visible on the page.",
+            "need_answer": true
+        }
+    ]
+
+    Example 2:
+    **Main Task**: 'Tell me the coordinates of National Natural History Museum in DD format'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "I need to first search for 'National Natural History Museum's information to get the coordinate.",
+            "subtask": "Search National Natural History Museum",
+            "target_page_description": "The current web page should be the search results of places related to 'National Natural History Museum'. ",
+            "necessary_actions": "Needed. Necessary actions including 1. typing 'National Natural History Museum' in the search bar and pressing Enter to get the search results.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "After searching, I need to choose the first result. And then question 'where is this' to show the coordinate of the 'National Natural History Museum'.",
+            "subtask": "Choose the first result and ask 'where is this' to show the coordinate",
+            "target_page_description": "The current web page should display the coordinate.",
+            "necessary_actions": "Needed. The executed actions should include 1. clicking the first result and 2. clicking 'where is this' to show the coordinate.",
+            "need_answer": false
+        },
+    ]
+
+    Example 3:
+    **Main Task**: 'Tell me the closest cafe near Harvard University.'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "I could start with directly searching 'cafes near Harvard University' to get the search results. ",
+            "subtask": "Search all cafe near Harvard University with query 'cafes near Harvard University'",
+            "target_page_description": "The current web page should display the search results, including a list of cafes with their names and addresses(possible street, zip code, city,).",
+            "necessary_actions": "Needed. The executed actions must include 1. typing 'cafes near Harvard University' in the search bar to get the search results.",
+            "need_answer": false
+        },
+    ]
+
+    Example 4:
+    **Main Task**: 'Show me the route from the city where the Statue of Liberty is located to the city where the Golden Gate Bridge is located.'
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "To show the route, I need first to navigate to the route planning page.",
+            "subtask": "Navigate to the route planning page",
+            "target_page_description": "The current web page should be the route planning page, where the 'from' and 'to' textboxes are displayed, currently empty and available for input.",
+            "necessary_actions": "Needed. The executed actions must include 1. clicking the 'find directions' or 'route planning' button to navigate to the route planning page.",
+            "need_answer": false
+        },
+        {
+            "reasoning": "I know that the Statue of Liberty is located in New York City, and the Golden Gate Bridge is located in San Francisco. So I could search the route from New York City to San Francisco.",
+            "subtask": "Search the route from New York City to San Francisco",
+            "target_page_description": "The current web page should display the route information from New York City to San Francisco, including the distance, time estimation, and detailed route plan.",
+            "necessary_actions": "Needed. The executed actions must include 1. typing 'New York City' in the 'from' textbox, 2, typing 'San Francisco' in the 'to' textbox.",
+            "need_answer": false
+        },
+    ]
+
+templete: |
+    Example 1:
+    **Main Task**:
+    **Decomposed Plan**:
+    [
+        {
+            "reasoning": "",
+            "subtask": "",
+            "target_page_description": "",
+            "necessary_actions": "",
+            "need_answer": false
+        },
+    ]

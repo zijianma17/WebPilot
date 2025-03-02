@@ -1,0 +1,269 @@
+gitlab:
+  planner: 
+    - |
+      Your account name is ‘Byte Blaze’. Any personal pronouns like ‘my’ should refer to your account name.
+    - |
+      If the "Main Task" involves finding items like issues or merge requests, always include a separate subtask to set the status to ‘all’ before searching for specific keywords or sorting. This ensures no relevant items are missed, providing comprehensive coverage and accurate results, even if the main task does not specify the status of the items.
+    - |
+      The top bar and the sidebar might lead to different domains. Elements in the top bar lead to the user account-related pages, while elements in the sidebar lead to the pages related to the current project/repository. When planning, if the 'Observation Description' indicates a general projects list page rather than a specific project page, use the top bar for navigation. If it indicates a specific project page, use the sidebar for navigation. Each navigation subtask, except for navigating to the homepage of a project repository, must specify whether to use the top bar or the sidebar for navigation.
+    - |
+      If the "Main Task" has the word 'branch', you MUST include a separate subtask titled 'Set the branch' in the generated plan. The branch main is not the default branch. In GitLab, the ‘Master’ branch is referred to as the ‘Main’ branch. This setting branch subtask must be the conducted directly after entering the project repository and before any other subtasks.
+    - |
+      The commits cannot be filtered by author or date. Searching is also not allowed. You MUST NOT generate a subtask to filter the commits. After navigating to the commits page, scroll through the commits to find the required information.
+    - |
+      When creating a new group and inviting members, the group must be successfully created. You cannot invite members directly on the group creation page. Inviting each member must be a single subtask.
+    - |
+      After the creation of a project/group, you need to navigate back to its homepage before setting up any other subtasks. When forking other projects, you have to select a namespace before forking.
+  controller:
+    - |
+      Your account name is ‘Byte Blaze’.
+    - |
+      When the task involves specific branches, it needs to be checked explicitly and must be exact. However the "Master" branch is the "Main" branch in Gitlab. "Setting a branch" MUST be a single subtask after entering the project repo and before any other subtasks. However, if the task does not specify the branch, you should keep the current branch and do not change it.
+    - |
+      When sorting the items, you must ensure you choose the correct one specified in the task.
+    - |
+      Date information is in the format of "MM/DD/YYYY". For example, "05/02/2022" means May 2, 2022. 
+    - |
+      When verifying the project name, there might be a user name before the project name. For example, "John Doe / robotics" and "robotics" refers to the same project.
+    - |
+      When the target page should be the project or user's page, be careful to check it. Distinguish them between the search result page.
+  extractor:
+      
+  executor:
+    - |
+      Elements with same name (issues, merge requests) might be one from the top bar(appear earlier in the actree) and one from the sidebar(appear later in the actree). They lead to different pages. When the task involves items related to account, use the top bar. When it involves current project/repository, use the sidebar.
+    - |
+      When sorting the items, you must first bring up the dropdown options and choose the appropriate sorting option.
+    - |
+      Clicking on date/time elements will not lead to the corresponding page. Date/time elements are only informative and for reference.
+    - |
+      If the desired project is not visible in the listed items, make full use of the search functionality on the page to accurately locate the target project. Do NOT rely on guessing to choose a possible project.
+    - |
+      Use ‘Search GitLab’ for broad searches across the entire platform, like finding projects, users, or groups. However, it is NOT suitable for searching within a specific project.
+    - |
+      Use the section-specific textboxes in the main body, such as in Issues, to search within the current project. Do NOT use the ‘Search GitLab’ textbox for this type of search.
+    - |
+      The commits cannot be filtered by author or date. Searching is also NOT allowed. When you are in the commits page, you can only scroll through the commits to find the required information.
+
+  appraiser:
+    - |
+      Elements with same name (issues, merge requests) might be one from the top bar(appear earlier in the actree) and one from the sidebar(appear later in the actree). They lead to different pages. When the task involves items related to account, use the top bar. When it involves current project/repository, use the sidebar.
+    - |
+      When sorting the items, you must first bring up the dropdown options and choose the appropriate sorting option.
+    - |
+      Clicking on date/time elements will not lead to the corresponding page. Date/time elements are only informative and for reference.
+    - |
+      If the desired project is not visible in the listed items, make full use of the search functionality on the page to accurately locate the target project. Do NOT rely on guessing to choose a possible project.
+    - |
+      Use ‘Search GitLab’ for broad searches across the entire platform, like finding projects, users, or groups. However, it is NOT suitable for searching within a specific project.
+    - |
+      Use the section-specific textboxes in the main body, such as in Issues, to search within the current project. Do NOT use the ‘Search GitLab’ textbox for this type of search.
+    - |
+      The commits cannot be filtered by author or date. Searching is also NOT allowed. When you are in the commits page, you can only scroll through the commits to find the required information.
+
+  verifier:
+    
+map:
+  planner: 
+    - |
+      If the task requires to get the estimated time or distance between two locations, the first subtask MUST be navigating to the route planning page, and search for the two locations.      
+    - |
+      When searching for a location with extra information, consider removing prepositions. For example, turn "Apple Store in New York" into "Apple Store New York". These kinds of tasks only need one subtask. Also add the city name if the location is a common name. For example, "Hotel Marriott" should be "Hotel Marriott New York", according to the task.
+    - |
+      By default, the transportation mode is set to "driving". You can ignore the transportation mode setting if the task does not specify it.
+    - |
+      When the location mentioned by the task is not the name but a description, use your own knowledge to translate the description into a location name in the subtask.
+    - |
+      If you know the answer already, for example, the state bordering California, you could plan a subtask that directly provides the answer.
+    - |
+      If you want to get the zip code, address of a location, you can directly get the information from the search result page without clicking on the result. But the coordinates of the location can only be obtained by clicking on the result and then clicking "Where is this?".
+    - |
+      When searching places around a location, directly search the keyword '{places} near {location}' in the search box.
+    - |
+      Some places is ambiguous, turn it into a specific location. For example, "CMU main campus" should be "Carnegie Mellon University".
+    - |
+      You can only be provided with text-based observations so don't plan to use the visual information.
+
+  controller:
+    - |
+      The location's information is displayed on the search result page. You could stop interacting with the map without clicking on the location.
+    - |
+      The order of typing the start and end locations is not important.
+    - |
+      When the textbox does not show the complete address in the search or route planning interface, it means the address is incorrect. Consider reconstructing the search keyword. (Possibly the prepositions should be removed)
+
+  extractor:
+    - |
+      If you know the answer already, for example, states bordering California, you could directly provide the answer.
+
+  executor:
+    - |
+      When searching for a location with extra information, consider removing prepositions. For example, turn "Apple Store in New York" into "Apple Store New York".
+    - |
+      When typing a location inside the search text, you MUST end the type action with 1, indicating the Enter key to be pressed. Otherwise, the search will not be executed.
+    - |
+      If you want to search '{places}' near a location, directly search the keyword '{places} near {location}' in the search box.
+    - |
+      If you want to get the DD-coordinates of a location, you need to choose the location from the search result page and click "Where is this?" to display the DD-coordinates.
+    - |
+      When planning a route, you need to go to the route planning page first and then type the two locations in the search box. After that, the route will be displayed on the map.
+
+  appraiser:
+    - |
+      When searching for a location with extra information, consider removing prepositions. For example, turn "Apple Store in New York" into "Apple Store New York".
+    - |
+      When typing a location inside the search text, you MUST end the type action with 1, indicating the Enter key to be pressed. Otherwise, the search will not be executed.
+    - |
+      If you want to search '{places}' near a location, directly search the keyword '{places} near {location}' in the search box.
+    - |
+      If you want to get the DD-coordinates of a location, you need to choose the location from the search result page and click "Where is this?" to display the DD-coordinates.
+    - |
+      When planning a route, you need to go to the route planning page first and then type the two locations in the search box. After that, the route will be displayed on the map.
+
+  verifier:
+    - |
+      When typing a location inside the search text, you MUST end the type action with 1, indicating the Enter key to be pressed. Otherwise, the search will not be executed.
+
+
+shopping:
+  planner:
+    - |
+      The 'My Account' page provides the following information related to your personal account: account information (e.g., my contact information), my orders, my wish list, address book.
+    - |
+      When the task involves identifying the order's or multiple orders' (total) cost, you don't need to navigate to the order details page. Extract information directly after navigating to the orders page. 
+    - |
+      When adding a product to my wish list, the web page will automatically navigate to the wish list page, so no necessary actions are required.
+    - |
+      When the task aims to browse a specific category, only one subtask is needed to navigate to the desired category page.
+    - |
+      You don’t need to fill your name and email when filling in the contact form, since they are default filled. Stay in the page after filling in the form, don't submit it.
+  
+  controller:
+    - |
+      If there is no information related to the task on the current page, you need to try to scroll the page until the bottom, when 'Copyright © 2013-present Magento, Inc. All rights reserved.' appears in the page, this means you have reached the bottom of the page.
+    - |
+      If you think that the current page matches the description of the target page, but you don't find any information related to the main task, you should consider outputing the answer as 'N/A' and end the task.
+
+  extractor:
+    - |
+      Always pay attention to the indentation of the text, it indicates the hierarchy of the information. Distinguish the elements that belong to different items.
+    - |
+      If you think that the current page matches the description of the target page, but you don't find any information related to the main task, you should consider outputing the answer as 'N/A' and end the task.
+      
+  executor:
+    - | 
+      When inputting dates, "2/1/2023" refers to February 1, 2023.
+    - |
+      If you want to using the 'contact us' function, the link to it might be in the footer of the page. Consider scrolling the page to find it.
+    - |
+      When you can't see the target item in the current page, consider clicking the next page button to explore more items.
+    - |
+      If you want to browse specific categories, consider using 'hover' action. Gradually reveal the desired category using multiple 'hover', and then click the desired category element.
+    - |
+      Your account email is "emma.lopez@gmail.com".
+    - |
+      When navigating to specific categories, hover over the 1st level, then hover over the 2nd level ... and click the desired category as the last step.
+
+  appraiser:
+    - | 
+      When inputting dates, "2/1/2023" refers to February 1, 2023.
+    - |
+      If you want to using the 'contact us' function, the link to it might be in the footer of the page. Consider scrolling the page to find it.
+    - |
+      When you can't see the target item in the current page, consider clicking the next page button to explore more items.
+    - |
+      If you want to browse specific categories, consider using 'hover' action. Gradually reveal the desired category using multiple 'hover', and then click the desired category element.
+
+  verifier:    
+
+
+shopping_admin:
+  planner:
+    - |
+      When searching customer phone numbers, you should remove the '+1' sign and any spaces in the phone number before searching. e.g. searching +1 2345678 should transfer the number to searching 2345678.
+    - |
+      The recent order and the bestseller information is directly displayed on the dashboard, you could directly extract information without navigating to some specific page.
+    - |
+      Reports Generation: When you want to generate a report, you have to first bring up the REPORTS menu option. 
+    - |
+      Reviews examination: When you want to examine reviews, you have to first bring up the MARKETING menu option.
+    - |
+      When searching for a 3-digit order ID, complete it with leading zeros to form a 9-digit order ID. For example, if the order ID is "302", you should search for "000000302".
+    - |
+      When calculating date ranges, count the start date as day 0 and the end date as day X. For example, if today is July 22 and you want to calculate the data range of last 30 days, the start date should be June 22 (day 0), and the end date should be July 22 (day 30).
+
+  controller:
+    - |
+      If you think that the current page matches the description of the target page, but you don't find any information related to the main task, you should consider outputing the answer as 'N/A' and end the task.
+       
+  extractor:
+    - |
+      Always pay attention to the indentation of the text, it indicates the hierarchy of the information. Distinguish the elements that belong to different items.
+    - |
+      If you think that the current page matches the description of the target page, but you don't find any information related to the main task, you should consider outputing the answer as 'N/A' and end the task.
+      
+  executor:
+    - |
+      Check for any existing 'active filters' on the page. If active filters are present, use the 'clear all' button to clear them before proceeding with the new search or filter application or directly read the information from the current page.
+    - |
+      When searching for a product, search the first word instead of the full product name, like 'Zoe', or 'Antonia' or 'Chloe'. 
+    - |
+      When using filters or the search bar, ensure the textbox is empty and no extra characters are entered beyond the characters you want to type in, especially when searching for IDs.
+    - | 
+      When inputting dates, "2/1/2023" refers to February 1, 2023.
+    - |
+      If no information relevant to the task appears in the current observation, you should consider scrolling down to find more information.
+    - |
+      When you want to modify the page titles, you can directly click the corresponding gridcell to show the editing textbox.
+
+  appraiser:
+    - |
+      Check for any existing 'active filters' on the page. If active filters are present, use the 'clear all' button to clear them before proceeding with the new search or filter application or directly read the information from the current page.
+    - |
+      When searching for a product, search the first word instead of the full product name, like 'Zoe', or 'Antonia' or 'Chloe'. 
+    - |
+      When using filters or the search bar, ensure the textbox is empty and no extra characters are entered beyond the characters you want to type in, especially when searching for IDs.
+    - | 
+      When inputting dates, "2/1/2023" refers to February 1, 2023.
+    - |
+      If no information relevant to the task appears in the current observation, you should consider scrolling down to find more information.
+    - |
+      When you want to modify the page titles, you can directly click the corresponding gridcell to show the editing textbox.
+  
+  verifier:
+
+reddit:
+  planner:
+    - |
+      Your account name is "MarvelsGrantMan136".
+    - |
+      When you want to post something in a specific subreddit, the first subtask is always to go to the all forums page. 
+    - |
+      When the subreddit is not clear, you don't have to search it, directly go to the one after navigating to the all forums page.
+    - |
+      Any subtask filling information on a page can be combined into one subtask. Such as filling the title and the body of a post. Make it clear what information should be filled in the subtask.
+    - |
+      When creating a new forum, title and name must be filled in seperately.
+    - |
+      When sorting the posts according to the 'Top', you should arrange a subtask to set the time range.
+    - |
+      If you want to edit your post, you don't need to go to a forum page, find the your post lists through the account page.
+      
+  controller:
+    - |
+      Always check whether the current subreddit is the one specified in the task. If not, you are not in the right place and will fail the task.
+  
+  extractor:       
+      
+  executor:
+    - |
+      When navigating to the list of all subreddits, you could click the link "alphabetical" to get a full list of current subreddits.
+  
+  appraiser:
+    - |
+      When navigating to the list of all subreddits, you could click the link "alphabetical" to get a full list of current subreddits.
+  
+  verifier:
+    - |
+      Always check the 0|1 after the type action, it indicates the Enter key.
+    
