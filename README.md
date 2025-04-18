@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-[<a href="https://yaoz720.github.io/WebPilot/">Website</a>] [<a href="https://arxiv.org/abs/2408.15978">Paper</a>] 
+[<a href="https://arxiv.org/abs/2408.15978">Paper</a>] 
 </p>
 
 ![Overview](resources/main_fig.png)
